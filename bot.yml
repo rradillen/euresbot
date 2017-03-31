@@ -1,0 +1,6 @@
+name: euresbot
+config:
+    - name: HUBOT_GOOGLE_CSE_ID
+      type: secret
+    - name: HUBOT_GOOGLE_CSE_KEY
+      type: secret
