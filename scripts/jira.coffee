@@ -2,16 +2,14 @@ module.exports = (robot) ->
 
 	robot.hear /(ENR|ARHSDEV|PORT|MONITOR)-[0-9]+/i, (res) ->
     data =
-      text: res.match[0]
+      text: "*#{res.match[0]}*"
       attachments: [
         {
-          title: "Jira links"
+          title: "JIRA links"
           fields: [{
-              title: "External"
               value: "<https://webgate.ec.europa.eu/eures-support/browse/#{res.match[0]}|External JIRA>"
               short: true
           },{
-              title: "Internal"
               value: "<https://helpdesk2.arhs-developments.com/issues/?jql=text%20~%20%22%5C%22#{res.match[0]}%5C%22%22|Internal JIRA>"
               short: true
           }]
