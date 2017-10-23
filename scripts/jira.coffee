@@ -17,5 +17,5 @@ module.exports = (robot) ->
       ]
     res.send data
 
-	robot.hear /(DG(EMPLEURES)?)-([0-9]+)+/ig, (res) ->
+	robot.hear /(DG(EMPLEURES)?)-([0-9]+)/i, (res) ->
     res.send "https://helpdesk2.arhs-developments.com/browse/DGEMPLEURES-#{res.match[3]}"
